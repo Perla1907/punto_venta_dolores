@@ -35,3 +35,12 @@ class CarritoVacioException implements Exception {
   @override
   String toString() => 'No hay productos en el carrito';
 }
+
+class DescuentoInvalidoException implements Exception {
+  final int porcentaje;
+
+  DescuentoInvalidoException(this.porcentaje);
+
+  @override
+  String toString() => 'El descuento de $porcentaje% no es válido. Debe estar entre 0% y 100%';
+}
